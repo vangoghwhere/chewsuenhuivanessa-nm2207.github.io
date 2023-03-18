@@ -1,16 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>My NM2207 GitHub Portfolio</title>
-    <script src="scripts/counter.js"></script>
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
-  <body>
-    <h1>Hello world! 🚀</h1>
-    <h2>This is a site hosted on GitHub Pages.</h2>
-    <h3>Here's a hungry mouse. Please feed him!</h3>
-    <h3 class="mouse">🐁</h3>
-    <h3>Food counter: <span class="counter">0</span> 🥙</h3>
-    <button>Feed!</button>
-  </body>
+
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <title>van's prototype hoho</title>
+        <script defer type="text/javascript" src="appscripts/main.js">
+        </script>
+
+        <!-- <style>
+        body {
+        background-image: url();
+        }
+        </style> -->
+    </head>
+
+    <body>
+        <div class="header">
+            <h6>Renewable Energy in Singapore</h6>
+        </div>
+
+        <div class="container">
+
+            <article class="introduction">
+                <h1> Introduction </h1>
+                <p> With the rise of activists such as Greta Thunberg, and greater commitments undertaken by governments to adopt cleaner practices, what do they mean? 
+                    What is Singapore's progress, and are we on track to meeting our own goals by 2030? 
+                </p>
+            </article>
+
+            <article class="definition">
+                <!-- define clean energy, green energy, renewable energy-->
+                <h1>Renewable, Clean and Green Energy - Aren't they the same? </h1>
+                <p>That's probably a question that has surfaced in our heads before. </p>
+                <!-- do table on definitions -->
+                <table style="width:100%">
+                    <tr>
+                    <th>Clean Energy</th>
+                    <th>Green Energy</th>
+                    <th>Renewable Energy</th>
+                    </tr>
+                    <tr>
+                    <td>Clean energy produces electricity without emissions.</td>
+                    <td>Green energy comes from totally natural sources, which have low or no environmental impact in their creation or use.</td>
+                    <td>Energy derived from natural sources that are replenished at a higher rate than they are consumed</td>
+                    </tr>
+                </table>
+
+            </article>
+
+            <article class="history">
+                <!-- history of renewable energy-->
+                <h1> A brief history of Renewable Energy </h1>
+                    <p>Insert timeline here</p>
+                    <!-- <div class="timeline">
+                        <div class="container left">
+                        <div class="content">
+                            <h2>2017</h2>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                        </div>
+                        <div class="container right">
+                        <div class="content">
+                            <h2>2016</h2>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                        </div>
+                    </div> -->
+
+            </article>
+
+            <article class="SGgreenplan">
+                <!-- what is sg green plan-->
+                <h1>SG Green Plan 2030</h1>
+                <!-- include link to the official govt page-->
+                <p>The Singapore Green Plan 2030, or the Green Plan, is a nation-wide movement to advance Singapore’s national agenda on sustainable development.
+                    To find out more, you can access the link <a href = "https://www.greenplan.gov.sg/"> here</a>!
+                </p>
+
+                <h2> Key targets for SGP2030</h2>
+                <ul>
+                    <li>Solar Energy</li>
+                        <ul>
+                            <li>Increase solar energy deployment by five-fold to at least 2GWp</li>
+                            <li>1.5 GWp by 2025</li>
+                        </ul>
+                        <br>
+                    <li>Cleaner-energy Vehicles</li>
+                        <ul>
+                            <li>8 EV-Ready Towns with chargers at all HDB carparks by 2025</li>
+                            <li>60,000 charging points nationwide by 2030, including 40,000 in public carparks and 20,000 in - private premises</li>
+                        </ul>
+                </ul>
+                <br> 
+            </article>
+
+            <article class = "consumptionlevels">
+            <!-- area chart of consumption levels -->
+                <h1>Energy consumption from various energy sources over the years</h1>
+                <!--<form id="form1"> 
+                    <input type="radio" id="geobiomass" name="Gio Biomass">
+                    <label for="geobiomass">Geo Biomass consumption</label> 
+
+                    <input type="radio" id="solarpower" name="Solar Power">
+                    <label for="solarpower">Solar consumption</label>
+
+                    <input type="radio" id="gas" name="Gas">
+                    <label for="Gas">Gas consumption</label>
+
+                    <input type="radio" id="coal" name="Coal">
+                    <label for="coal">Coal consumption</label>
+
+                    <input type="radio" id="oil" name="Oil">
+                    <label for="oil">Oil consumption</label>
+
+                    <input type="radio" id="all" name="All">
+                    <label for="all">All sources</label>
+                </form>
+                <br>  -->
+
+                
+            </article>
+
+            <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Beijing')">All sources</button>
+                <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Geo Biomass</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Solar Power</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Gas</button>
+                <button class="tablinks" onclick="openCity(event, 'Singapore')">Coal</button>
+                <button class="tablinks" onclick="openCity(event, 'Malaysia')">Oil</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="Beijing" class="tabcontent">
+                <h3>All sources (stacked area chart)</h3>
+                <p>insert chart here</p>
+            </div>
+
+            <div id="London" class="tabcontent">
+                <div id="canvas-container">
+                    <canvas id="energyGB"></canvas>
+                </div>
+            </div>
+            
+            <div id="Paris" class="tabcontent">
+                <div id="canvas-container">
+                    <canvas id="energySolar"></canvas>
+                </div>
+            </div>
+            
+            <div id="Tokyo" class="tabcontent">
+                <h3>Gas</h3>
+                <p>insert chart here</p>
+            </div>
+
+            <div id="Singapore" class="tabcontent">
+                <h3>Coal</h3>
+                <p>insert chart here</p>
+            </div>
+
+            <div id="Malaysia" class="tabcontent">
+                <h3>Oil</h3>
+                <p>insert chart here</p>
+            </div>
+
+            <article class="progress">
+                <h1>So, what is SG's progress thus far?</h1>
+                <p>For this data story, we will only be focusing on solar panels and electric vehicles in Singapore</p>
+                
+                <!--Solar Panels Installations-->
+                    <div id="canvas-container">
+                        <canvas id="solar-panels-distribution" style="position: relative; height:50vh; width:50vw"></canvas>
+                    </div>
+                    <br>
+
+                <!--Interactive element, when users select the map, an interactive map will appear with the same data, but presented differently -->
+                <p> How would you like to see this data?</p>
+                <form> 
+                    <input type="radio" id="donut" name="donut">
+                    <label for="donut">Pie chart</label> <br>
+                    <input type="radio" id="donut" name="donut">
+                    <label for="donut">Doughnut chart</label> <br>
+                    <input type="radio" id="map" name="map">
+                    <label for="map">Map</label> <br>
+                </form><br>
+
+                <!--Total Number of Installed Solar Panels over the years-->
+                    <div id="canvas-container">
+                        <canvas id="solarPanelNumber" ></canvas>
+                    </div>
+                    
+                    <br>
+                    <p>insert paragraph/description here</p>
+                    <br>
+
+                <!--Total Installed Capacity of Solar Panels over the years-->
+                    <div id="canvas-container">
+                        <canvas id="solarPanelMwp"></canvas>
+                    </div>
+
+                    <br> 
+                    <p>insert paragraph/description here</p>
+                    <br>
+
+            </article>
+
+            <!--A little quiz section! On fun facts about renewable energy in Singapore-->
+            <aside class="sidebar">
+                <h1>Test your knowledge!</h1>
+                 <p>How many EV charging stations have been installed in Singapore thus far?</p>
+                 <form>
+                    <input type="radio" id="2000" name="2000">
+                    <label for="2000">2000</label> <br>
+                    <input type="radio" id="3000" name="3000">
+                    <label for="3000">3000</label> <br>
+                    <input type="radio" id="4000" name="4000">
+                    <label for="4000">4000</label> <br>
+                    <input type="radio" id="5000" name="5000">
+                    <label for="5000">5000</label>
+                    
+                    <br><br>
+                    <input type="button" id="submit" name="submit" value="Submit!">
+                 </form>
+            </aside>
+
+            <!--Electric Vehicles-->
+            <article class="evcharging" >
+                <h2>Let's take a look at the Electric Vehicle scene in Singapore!</h2>
+                <p><img src="resources/vector graphics/electricvehicle.png" id="foo" height="400" width="400">
+                    As of 2022, there have been 3000 EV charging points installed all around Singapore! We have a long way to go...
+                    <!--Bar chart for the current number of electric vehicles (but it's not working haha)-->
+                    <div id="canvas-container" style="display: flex">
+                        <canvas id="electricVehicle"></canvas>
+                    </div>
+                    </p>
+
+            </article>
+            
+            <!--Analysis -->
+            <article class="analysis" >
+                <h1>Analysis</h1>
+                <p> answer problem question here</p>
+            </article>
+
+            <!--conclusion-->
+            <article class="conclusion" >
+                <h1>Conclusion</h1>
+                <p> to be confirmed</p>
+            </article>
+
+        </div>
+
+    
+    </body>
 </html>

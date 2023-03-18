@@ -1,0 +1,193 @@
+/* properties of individual element*/
+
+html, body {
+    height:100%;
+    width:100%;
+    background-color: #4b6249;
+  }
+
+header {
+  margin: 10px;
+}
+
+h1 {
+  color: hsl(123, 37%, 89%);
+  font-size: 30px;
+  text-align: center
+}
+
+h2 {
+  color: hsl(132, 22%, 77%);
+  font-size: 20px;
+  text-align: center
+}
+
+h5 {
+  height:100%;
+  width: 100%;
+  color: white;
+  font-size: 20px; 
+  text-align: center;
+}
+
+h6 {
+  height:100%;
+  width: 100%;
+  color: white;
+  font-size: 50px; 
+  text-align: center;
+  padding: 10px;
+}
+
+/* body elements*/
+body {
+  height:100%;
+  width: 100%;
+  color: white ,
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+  /* this isn't working */
+.form1 {
+  align-items: center;
+}
+
+.London {
+  color: white;
+}
+
+.Paris {
+  color: white;
+}
+
+.Tokyo {
+  color: white;
+}
+
+/* TAB STYLING */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  grid-column: 1/span 2;
+}
+
+/*container properties*/
+.container {
+  font-family: Helvetica, Arial, sans-serif;
+  height:95%;
+  width:95%;
+  color: white;
+}
+
+.container > * {
+  background-color: #4b6249;
+  padding: 20px;
+}
+
+.introduction {
+  overflow-y: visible;
+  height: 30px;
+}
+.header {
+  padding: 0px;
+}
+
+img{
+  float: left;
+}
+
+.tab {
+  height: 80px;
+}
+
+/* Define the grid */
+.container {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-rows: 30% auto 20%;
+}
+
+
+/* Place items on the grid */
+.header {
+  grid-column: 1 / span 2;
+}
+.introduction {
+  grid-column: 1;
+}
+.definition {
+  grid-column: 1;
+}
+.history {
+  grid-column: 1;
+}
+.SGgreenplan {
+  grid-column: 1/span 2;
+}
+.consumptionlevels {
+  grid-column: 1/span 2;
+}
+.progress {
+  grid-column: 1/span 2;
+}
+.sidebar {
+  
+  grid-row: 1/ span 5;
+  grid-column: 2
+}
+.evcharging {
+  grid-column: 1/span 2;
+}
+.analysis {
+  grid-column: 1/span 2;
+}
+
+.conclusion {
+  grid-column: 1/span 2;
+}
+
+.tab {
+  grid-column: 1/span 2;
+}
+
