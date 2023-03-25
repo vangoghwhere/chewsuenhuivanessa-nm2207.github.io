@@ -1,3 +1,35 @@
+//SECTION!! Singapore's Four Switches
+
+//Popup for Natural Gas
+document.getElementById("naturalgas").addEventListener("click", popupNaturalGas);
+function popupNaturalGas() {
+  var popup = document.getElementById("popup-naturalgas");
+  popup.classList.toggle("show");
+};
+
+//Popup for Solar Panel
+document.getElementById("solarpanel").addEventListener("click", popupSolarPanel);
+function popupSolarPanel() {
+  var popup = document.getElementById("popup-solarpanel");
+  popup.classList.toggle("show");
+};
+
+//Popup for Regional Power Grids
+document.getElementById("regionalpowergrids").addEventListener("click", popupRegionalPowerGrids);
+function popupRegionalPowerGrids() {
+  var popup = document.getElementById("popup-regionalpowergrids");
+  popup.classList.toggle("show");
+};
+
+//Popup for Low Carbon Alternatives
+document.getElementById("lowcarbonalternatives").addEventListener("click", popupLowCarbonAlternatives);
+function popupLowCarbonAlternatives() {
+  var popup = document.getElementById("popup-lowcarbonalternatives");
+  popup.classList.toggle("show");
+};
+
+//SECTION!! Energy consumption from various energy sources over the years
+
 // an area chart or line chart showing energy consumption trends in Singapore
 //viewers can choose which type of consumption they want to take a look at, or all in general 
 const labelYear = ['1965', '1970', '1975', '1980', '1985', '1990', '1995', '2000', '2005', '2010', '2015', '2020', '2021']
@@ -120,6 +152,9 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+
+//SECTION!! So, what is SG's progress thus far?
+
 //pie chart of distribution of Solar Panels Installations across Singapore
 const data = {
   labels: ['North', 'North East', 'East', 'Central', 'West'],
@@ -165,7 +200,7 @@ new Chart("solar-panels-distribution",
 )
 
 //interactive map with the number of installations of solar panels across the five regions in Singapore 
-//add graphics 
+//addEventListener here and connect to radio buttons
 
 //Bar chart of the number of installations of solar panels 
 const dataSolarNumber = {
@@ -343,4 +378,20 @@ new Chart("electricVehicle",
   }
 }); 
 
+//addEventListener and getElementById here for the quiz section 
+// let answer1 = document.getElementById("3000");
+// if () {
+//   function rightOrWrong() {
+//     window.alert("Congrats! That's the right answer!")
+//   }
+// }
+
+// document.getElementById("3000").addEventListener("click", rightOrWrong);
+// function rightOrWrong() {
+//   window.alert("Congrats! That's the right answer!")
+
+// }
+//add if else loop here
+  //add window.alert("Congrats! That's the right answer!") if user chooses correct option
+  //add window.alert("Sorry, that's incorrect, do try again!") if user chooses wrong answer
 
