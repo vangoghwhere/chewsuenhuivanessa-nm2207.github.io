@@ -39,6 +39,15 @@ h6 {
   padding: 10px;
 }
 
+p {
+  text-align: center;
+}
+
+.naturalgas {
+  display: block;
+  margin: auto;
+}
+
 /* body elements*/
 body {
   height:100%;
@@ -145,7 +154,7 @@ img{
   grid-template-columns: 80% 20%;
   grid-gap: 10px;
   padding: 10px;
-  grid-template-rows: 30% auto 20%;
+  grid-template-rows: 50% auto 20%;
 }
 
 
@@ -153,17 +162,34 @@ img{
 .header {
   grid-column: 1 / span 2;
 }
+
 .introduction {
   grid-column: 1;
 }
+
 .definition {
   grid-column: 1;
+  border-style: groove;
+  width: 80%;
+  margin: auto;
 }
+
 .history {
-  grid-column: 1;
+  grid-column: 1/ span 2;
 }
+
+.fourswitches {
+  grid-column: 1/span 2;
+  border-style: groove;
+  width: 60%;
+  margin: auto;
+}
+
 .SGgreenplan {
   grid-column: 1/span 2;
+  border-style: groove;
+  width: 60%;
+  margin: auto;
 }
 .consumptionlevels {
   grid-column: 1/span 2;
@@ -172,7 +198,6 @@ img{
   grid-column: 1/span 2;
 }
 .sidebar {
-  
   grid-row: 1/ span 5;
   grid-column: 2
 }
@@ -181,13 +206,200 @@ img{
 }
 .analysis {
   grid-column: 1/span 2;
+  border-style: groove;
+  width: 60%;
+  margin: auto;
 }
 
 .conclusion {
   grid-column: 1/span 2;
+  border-style: groove;
+  width: 60%;
+  margin: auto;
 }
 
 .tab {
   grid-column: 1/span 2;
 }
 
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+/* Popup container - can be anything you want */
+.popup2 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup2 .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup2 .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/* Popup container - can be anything you want */
+.popup3 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup3 .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup3 .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/* Popup container - can be anything you want */
+.popup4 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup4 .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup4 .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
