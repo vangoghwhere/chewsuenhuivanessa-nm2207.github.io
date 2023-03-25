@@ -24,15 +24,24 @@
 
             <article class="introduction">
                 <h1> Introduction </h1>
-                <p> With the rise of activists such as Greta Thunberg, and greater commitments undertaken by governments to adopt cleaner practices, what do they mean? 
-                    What is Singapore's progress, and are we on track to meeting our own goals by 2030? 
+                <p> 
+                    There has been a lot of hype in recent years regarding renewable energy, 
+                    with activists such as Greta Thunberg spearheading protests against practices that are harmful to the environment, 
+                    and governments pledging to turn away from fossil fuels to utilise more renewable sources of energy. 
+                </p>
+                <br>
+                <p>
+                    Closer to home, the Singapore government has also launched the SG Green Plan 2030 in 2021, 
+                    with a set of targets to turn Singapore into a cleaner and greener country. 
+                    But as the stipulated deadline looms, I aim to find out what is Singapore's progress in making those targets a reality, 
+                    and if a massive change such as turning to renewable energy is worth it.  
                 </p>
             </article>
 
             <article class="definition">
                 <!-- define clean energy, green energy, renewable energy-->
                 <h1>Renewable, Clean and Green Energy - Aren't they the same? </h1>
-                <p>That's probably a question that has surfaced in our heads before. </p>
+                <p>Well, there is a difference actually. </p>
                 <!-- do table on definitions -->
                 <table style="width:100%">
                     <tr>
@@ -45,14 +54,32 @@
                     <td>Green energy comes from totally natural sources, which have low or no environmental impact in their creation or use.</td>
                     <td>Energy derived from natural sources that are replenished at a higher rate than they are consumed</td>
                     </tr>
-                </table>
+                </table><br>
+                <p>Do they sound similar? Well, a key difference is that while most green energy sources are also renewable, 
+                    not all renewable energy sources are considered entirely green.
+                </p>
+                <p>
+                    Take hydropower for example. Hydropower involves the use of water to generate electricity, and is thus considered a form of renewable energy source. 
+                    However, many have argued that hydropower cannot be considered a form green energy due to the industrialisation and large amounts of deforestation
+                    needed to build the massive hydro dams. 
+                </p>
 
+                <p>
+                    Some examples of green energy sources that are also sources of renewable energy include: 
+                    <ul id="energylist">
+                        <li>Solar energy</li>
+                        <li>Wind energy</li>
+                        <li>Geothermal energy</li>
+                    </ul>
+                </p>
             </article>
 
             <article class="history">
                 <!-- history of renewable energy-->
-                <h1> A brief history of Renewable Energy </h1>
-                    <p>Insert timeline here</p>
+                <h1> Blast to the Past: A brief history of Renewable Energy </h1>
+                    <p>
+                        Let’s rewind to the 1900s, and visit some milestones Singapore has achieved in the area of renewable energy! 
+                    </p>
                     <!-- <div class="timeline">
                         <div class="container left">
                         <div class="content">
@@ -70,11 +97,61 @@
 
             </article>
 
+            <article class="fourswitches">
+                <h1> Singapore's Four Switches</h1>
+                <p>
+                    Just as how we have the four National taps in Singapore, 
+                    we also harness four Switches that regulate our energy supply, while promoting energy efficiency. 
+                    Click on each switch to find out more!
+                </p><br>
+
+                <!-- <div id="natural-gas"> 
+                    <img src = "resources/4 switches graphics/gas.png" height="200" width="200" id="naturalgas">
+                </div> -->
+                <div class="popup">
+                    <img src = "resources/4 switches graphics/natural-gas.png" height="173" width="173" id="naturalgas">
+                    <span class="popuptext" id="popup-naturalgas">
+                        About 95% of Singapore’s electricity is generated using natural gas, the cleanest form of fossil fuel.
+                    </span>
+                </div>
+
+                <div class="popup2">
+                    <img src = "resources/4 switches graphics/solar-panel.png" height="173" width="173" id="solarpanel">
+                    <span class="popuptext" id="popup-solarpanel">
+                        Currently holds the top spot as the most promising renewable energy source in the near term for Singapore
+                        Constraints: due to Singapore’s scarce land area, the amount of solar energy that can be harnessed is limited. 
+                        Even as we work towards achieving our 2030 solar target of 2GWp, it will constitute only around 3% of the country’s total projected electricity demand in 2030.
+                    </span>
+                </div>
+
+                <div class="popup3">
+                    <img src = "resources/4 switches graphics/planet-earth.png" height="173" width="173" id="regionalpowergrids">
+                    <span class="popuptext" id="popup-regionalpowergrids">
+                        Importing electricity from regional countries 
+                        Can help accelerate the development of renewable energy projects in the region, bringing economic growth and increasing access to renewable energy
+                        Helps diversify our energy sources away from natural gas, improving energy resilience 
+                        Done through bilateral cooperation or regional initiatives.
+                    </span>
+                </div>
+
+                <div class="popup4">
+                    <img src = "resources/4 switches graphics/co2.png" height="173" width="173" id="lowcarbonalternatives">
+                    <span class="popuptext" id="popup-lowcarbonalternatives">
+                        Importing electricity from regional countries 
+                        Can help accelerate the development of renewable energy projects in the region, bringing economic growth and increasing access to renewable energy
+                        Helps diversify our energy sources away from natural gas, improving energy resilience 
+                        Done through bilateral cooperation or regional initiatives.
+                    </span>
+                </div>
+
+            </article>
+
             <article class="SGgreenplan">
                 <!-- what is sg green plan-->
                 <h1>SG Green Plan 2030</h1>
                 <!-- include link to the official govt page-->
-                <p>The Singapore Green Plan 2030, or the Green Plan, is a nation-wide movement to advance Singapore’s national agenda on sustainable development.
+                <p>
+                    The Singapore Green Plan 2030, or the Green Plan, is a nation-wide movement to advance Singapore’s national agenda on sustainable development.
                     To find out more, you can access the link <a href = "https://www.greenplan.gov.sg/"> here</a>!
                 </p>
 
@@ -177,7 +254,7 @@
 
                 <!--Interactive element, when users select the map, an interactive map will appear with the same data, but presented differently -->
                 <p> How would you like to see this data?</p>
-                <form> 
+                <form class="viewdata"> 
                     <input type="radio" id="donut" name="donut">
                     <label for="donut">Pie chart</label> <br>
                     <input type="radio" id="donut" name="donut">
@@ -209,6 +286,8 @@
             <!--A little quiz section! On fun facts about renewable energy in Singapore-->
             <aside class="sidebar">
                 <h1>Test your knowledge!</h1>
+
+                <div class="question1">
                  <p>How many EV charging stations have been installed in Singapore thus far?</p>
                  <form>
                     <input type="radio" id="2000" name="2000">
@@ -223,13 +302,15 @@
                     <br><br>
                     <input type="button" id="submit" name="submit" value="Submit!">
                  </form>
+                </div>
+                
             </aside>
 
             <!--Electric Vehicles-->
             <article class="evcharging" >
                 <h2>Let's take a look at the Electric Vehicle scene in Singapore!</h2>
                 <p><img src="resources/vector graphics/electricvehicle.png" id="foo" height="400" width="400">
-                    As of 2022, there have been 3000 EV charging points installed all around Singapore! We have a long way to go...
+                    As of 2022, there have been 3000 EV charging points installed all around Singapore! Looks like we still have a long way to go...
                     <!--Bar chart for the current number of electric vehicles (but it's not working haha)-->
                     <div id="canvas-container" style="display: flex">
                         <canvas id="electricVehicle"></canvas>
