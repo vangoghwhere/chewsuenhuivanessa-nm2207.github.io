@@ -1,9 +1,12 @@
+
+
 /* properties of individual element*/
 
 html, body {
     height:100%;
     width:100%;
-    background-color: #4b6249;
+    /* background-color: #4b6249; */
+    background-color: #E4E0C9;
   }
 
 header {
@@ -11,21 +14,30 @@ header {
 }
 
 h1 {
-  color: hsl(123, 37%, 89%);
+  color: #ED6335;
   font-size: 30px;
-  text-align: center
+  text-align: center;
+  font-family: Copperplate, Papyrus, fantasy;
 }
 
 h2 {
-  color: hsl(132, 22%, 77%);
+  color:#ED6335 ;
   font-size: 20px;
-  text-align: center
+  text-align: center;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
+h3 {
+  color: #ECAE7D;
+  font-size: 30px;
+  text-align: center;
+  font-family: Copperplate, Papyrus, fantasy;
 }
 
 h5 {
   height:100%;
   width: 100%;
-  color: white;
+  color: #ED6335;
   font-size: 20px; 
   text-align: center;
 }
@@ -33,14 +45,30 @@ h5 {
 h6 {
   height:100%;
   width: 100%;
-  color: white;
+  color: #e93118;
   font-size: 50px; 
   text-align: center;
   padding: 10px;
+  font-family: Copperplate, Papyrus, fantasy;
 }
 
 p {
   text-align: center;
+  color: black;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
+  font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
+}
+
+/* .question {
+  color: black;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
+  font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
+} */
+
+ul {
+  color: black;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
+  font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
 }
 
 .naturalgas {
@@ -52,13 +80,16 @@ p {
 body {
   height:100%;
   width: 100%;
-  color: white ,
+  color: black ,
 }
 
 table, th, td {
-    border: 1px solid white;
+    border: 1px solid black;
     border-collapse: collapse;
     padding: 10px;
+    color: black;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
+    font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
 }
 
 * {
@@ -71,15 +102,15 @@ table, th, td {
 }
 
 .London {
-  color: white;
+  color: black;
 }
 
 .Paris {
-  color: white;
+  color: black;
 }
 
 .Tokyo {
-  color: white;
+  color: black;
 }
 
 /* TAB STYLING */
@@ -128,14 +159,15 @@ table, th, td {
 }
 
 .container > * {
-  background-color: #4b6249;
+  /* background-color: #4b6249; */
+  background-color: #E4E0C9;
   padding: 20px;
 }
 
 .introduction {
-  overflow-y: visible;
-  height: 30px;
+  height: fit-content;
 }
+
 .header {
   padding: 0px;
 }
@@ -165,6 +197,9 @@ img{
 
 .introduction {
   grid-column: 1;
+  border-style: groove;
+  width: 80%;
+  margin: auto;
 }
 
 .definition {
