@@ -17,7 +17,7 @@
 
     <body>
         <div class="header">
-            <h6>Renewable Energy in Singapore</h6>
+            <h6>Renewable Energy in Singapore </h6>
         </div>
 
         <div class="container">
@@ -28,9 +28,7 @@
                     There has been a lot of hype in recent years regarding renewable energy, 
                     with activists such as Greta Thunberg spearheading protests against practices that are harmful to the environment, 
                     and governments pledging to turn away from fossil fuels to utilise more renewable sources of energy. 
-                </p>
-                <br>
-                <p>
+                <br><br>
                     Closer to home, the Singapore government has also launched the SG Green Plan 2030 in 2021, 
                     with a set of targets to turn Singapore into a cleaner and greener country. 
                     But as the stipulated deadline looms, I aim to find out what is Singapore's progress in making those targets a reality, 
@@ -40,10 +38,11 @@
 
             <article class="definition">
                 <!-- define clean energy, green energy, renewable energy-->
-                <h1>Renewable, Clean and Green Energy - Aren't they the same? </h1>
+                <h1>Renewable, Clean and Green Energy</h1>
+                <h1>Aren't they the same? </h1>
                 <p>Well, there is a difference actually. </p>
                 <!-- do table on definitions -->
-                <table style="width:100%">
+                <table style="width:100%" id="table">
                     <tr>
                     <th>Clean Energy</th>
                     <th>Green Energy</th>
@@ -152,9 +151,18 @@
                 <!-- include link to the official govt page-->
                 <p>
                     The Singapore Green Plan 2030, or the Green Plan, is a nation-wide movement to advance Singapore’s national agenda on sustainable development.
-                    To find out more, you can access the link <a href = "https://www.greenplan.gov.sg/"> here</a>!
-                </p>
+                    <br><br>
+                    Find out more on the official website <a href = "https://www.greenplan.gov.sg/" target="_blank"> here</a>!
+                </p><br>
 
+                <!-- img src = https://www.greenplan.gov.sg/cos/
+                <div class = "infographic">
+                    <img src = "resources/SG Green Plan 2030 infographic.png" height = "300" width = "500">
+                </div> <br> -->
+
+                <!-- Idk why the image overlaps with the text-->
+
+                <div>
                 <h2> Key targets for SGP2030</h2>
                 <ul>
                     <li>Solar Energy</li>
@@ -174,7 +182,7 @@
 
             <article class = "consumptionlevels">
             <!-- area chart of consumption levels -->
-                <h1>Energy consumption from various energy sources over the years</h1>
+                <h1>Singapore's energy consumption from various energy sources over the years</h1>
                 <!--<form id="form1"> 
                     <input type="radio" id="geobiomass" name="Gio Biomass">
                     <label for="geobiomass">Geo Biomass consumption</label> 
@@ -228,18 +236,21 @@
             </div>
             
             <div id="Tokyo" class="tabcontent">
-                <h3>Gas</h3>
-                <p>insert chart here</p>
+                <div id="canvas-container">
+                    <canvas id="energyGas"></canvas>
+                </div>
             </div>
 
             <div id="Singapore" class="tabcontent">
-                <h3>Coal</h3>
-                <p>insert chart here</p>
+                <div id="canvas-container">
+                    <canvas id="energyCoal"></canvas>
+                </div>
             </div>
 
             <div id="Malaysia" class="tabcontent">
-                <h3>Oil</h3>
-                <p>insert chart here</p>
+                <div id="canvas-container">
+                    <canvas id="energyOil"></canvas>
+                </div>
             </div>
 
             <article class="progress">
@@ -248,19 +259,21 @@
                 
                 <!--Solar Panels Installations-->
                     <div id="canvas-container">
-                        <canvas id="solar-panels-distribution" style="position: relative; height:50vh; width:50vw"></canvas>
+                        <canvas id="solar-panels-distribution-pie" style="position: relative; height:50vh; width:50vw"></canvas>
                     </div>
-                    <br>
+                    <br> 
+
+                    <!-- <div id="canvas-container">
+                        <canvas id="solar-panels-distribution-donut" style="position: relative; height:50vh; width:50vw"></canvas>
+                    </div>
+                    <br> -->
 
                 <!--Interactive element, when users select the map, an interactive map will appear with the same data, but presented differently -->
                 <p> How would you like to see this data?</p>
                 <form class="viewdata"> 
-                    <input type="radio" id="donut" name="donut">
-                    <label for="donut">Pie chart</label> <br>
-                    <input type="radio" id="donut" name="donut">
-                    <label for="donut">Doughnut chart</label> <br>
-                    <input type="radio" id="map" name="map">
-                    <label for="map">Map</label> <br>
+                    <input type="button" id="pie" name="pie chart" value="Pie Chart">
+                    <input type="button" id="bar" name="bar" value = "Bar chart">
+                    <input type="button" id="map" name="map" value = "Map">
                 </form><br>
 
                 <!--Total Number of Installed Solar Panels over the years-->
@@ -300,23 +313,29 @@
                 <hr>
                 <h1>Test your knowledge!</h1>
 
-                <div class="question1">
+                <!-- <div class="question1">
                  <p>How many EV charging stations have been installed in Singapore thus far?</p>
-                 <form>
-                    <input type="radio" id="2000" name="2000">
+                 <form id = "quiz">
+                    <input type="radio" id="2000" name="2000" value = "2000" style="color: black;">
                     <label for="2000">2000</label> <br>
-                    <input type="radio" id="3000" name="3000">
+                    <input type="radio" id="3000" name="3000" value = "3000" class = "option">
                     <label for="3000">3000</label> <br>
-                    <input type="radio" id="4000" name="4000">
+                    <input type="radio" id="4000" name="4000" value = "4000" class = "option">
                     <label for="4000">4000</label> <br>
-                    <input type="radio" id="5000" name="5000">
+                    <input type="radio" id="5000" name="5000" value = "5000" class = "option">
                     <label for="5000">5000</label>
                     
                     <br><br>
                     <input type="button" id="submit" name="submit" value="Submit!">
                  </form>
-                </div>
+                </div> -->
                 
+                <div id = "quiz-container"> 
+                    <div id = "question"></div> <br> 
+                    <div id = "options"></div> <br>
+                    <button id = "submit"> Submit!</button>
+                </div>
+
             </aside>
 
             <!--Electric Vehicles-->
