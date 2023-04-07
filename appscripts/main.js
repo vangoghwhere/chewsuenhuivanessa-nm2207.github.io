@@ -1,28 +1,28 @@
 //SECTION!! Singapore's Four Switches
 
 //Popup for Natural Gas
-document.getElementById("naturalgas").addEventListener("click", popupNaturalGas);
+document.getElementById("switch1").addEventListener("click", popupNaturalGas);
 function popupNaturalGas() {
   var popup = document.getElementById("popup-naturalgas");
   popup.classList.toggle("show");
 };
 
 //Popup for Solar Panel
-document.getElementById("solarpanel").addEventListener("click", popupSolarPanel);
+document.getElementById("switch2").addEventListener("click", popupSolarPanel);
 function popupSolarPanel() {
   var popup = document.getElementById("popup-solarpanel");
   popup.classList.toggle("show");
 };
 
 //Popup for Regional Power Grids
-document.getElementById("regionalpowergrids").addEventListener("click", popupRegionalPowerGrids);
+document.getElementById("switch3").addEventListener("click", popupRegionalPowerGrids);
 function popupRegionalPowerGrids() {
   var popup = document.getElementById("popup-regionalpowergrids");
   popup.classList.toggle("show");
 };
 
 //Popup for Low Carbon Alternatives
-document.getElementById("lowcarbonalternatives").addEventListener("click", popupLowCarbonAlternatives);
+document.getElementById("switch4").addEventListener("click", popupLowCarbonAlternatives);
 function popupLowCarbonAlternatives() {
   var popup = document.getElementById("popup-lowcarbonalternatives");
   popup.classList.toggle("show");
@@ -49,6 +49,9 @@ const energyGeoBiomass = {
     {
       label: 'Geo Biomass',
       data: geoBiomass,
+      backgroundColor: 'rgba(2, 108, 128, 0.5)',
+      borderWidth: 1,
+      borderColor: 'black',
     }
   ]
 }
@@ -63,6 +66,7 @@ new Chart('energyGB',
               display: false
           },
           fill: true,
+          
           title: {
               display: true,
               text: ['Energy consumption from Geo Biomass'],
@@ -110,6 +114,9 @@ const energySolarPower = {
     {
       label: 'Solar Power',
       data: solarPower,
+      backgroundColor: 'rgba(202, 60, 74, 0.5)',
+      borderWidth: 1,
+      borderColor: 'black'
     }
   ]
 }
@@ -128,12 +135,12 @@ new Chart('energySolar',
               text: ['Energy consumption from Solar Power'],
               fontFamily: "Copperplate, Papyrus, fantasy",
               fontSize: 24, 
-              fontColor: 'rgb(2, 108, 128)',
+              fontColor: 'rgb(202,60,74)',
           },
           scales: { 
             yAxes: [{
                 ticks: {
-                    fontColor: 'rgb(2, 108, 128)',
+                    fontColor: 'rgb(202,60,74)',
                     beginAtZero: true,
                     fontFamily: "Copperplate, Papyrus, fantasy"
                 },
@@ -147,7 +154,7 @@ new Chart('energySolar',
             ],
             xAxes: [{
               ticks: {
-                  fontColor: 'rgb(2, 108, 128)',
+                  fontColor: 'rgb(202,60,74)',
                   beginAtZero: false,
                   fontFamily: "Copperplate, Papyrus, fantasy"
               },
@@ -170,6 +177,9 @@ const energyGas = {
     {
       label: 'Gas',
       data: gas,
+      backgroundColor: 'rgba(239,117,70, 0.5)',
+      borderWidth: 1,
+      borderColor: 'black'
     }
   ]
 }
@@ -189,12 +199,12 @@ new Chart('energyGas',
               text: ['Energy consumption from Gas'],
               fontFamily: "Copperplate, Papyrus, fantasy",
               fontSize: 24, 
-              fontColor: 'rgb(2, 108, 128)',
+              fontColor: 'rgb(239,117,70)',
           },
           scales: { 
             yAxes: [{
                 ticks: {
-                    fontColor: 'rgb(2, 108, 128)',
+                    fontColor: 'rgb(239,117,70)',
                     beginAtZero: true,
                     fontFamily: "Copperplate, Papyrus, fantasy"
                 },
@@ -208,7 +218,7 @@ new Chart('energyGas',
             ],
             xAxes: [{
               ticks: {
-                  fontColor: 'rgb(2, 108, 128)',
+                  fontColor: 'rgb(239,117,70)',
                   beginAtZero: false,
                   fontFamily: "Copperplate, Papyrus, fantasy"
               },
@@ -232,6 +242,9 @@ const energyCoal = {
     {
       label: 'Coal',
       data: coal,
+      backgroundColor: 'rgba(54, 112, 85, 0.5)',
+      borderWidth: 1,
+      borderColor: 'black'
     }
   ]
 }
@@ -251,12 +264,12 @@ new Chart('energyCoal',
               text: ['Energy consumption from Coal'],
               fontFamily: "Copperplate, Papyrus, fantasy",
               fontSize: 24, 
-              fontColor: 'rgb(2, 108, 128)',
+              fontColor: 'rgb(54, 112, 85)',
           },
           scales: { 
             yAxes: [{
                 ticks: {
-                    fontColor: 'rgb(2, 108, 128)',
+                    fontColor: 'rgb(54, 112, 85)',
                     beginAtZero: true,
                     fontFamily: "Copperplate, Papyrus, fantasy"
                 },
@@ -270,7 +283,7 @@ new Chart('energyCoal',
             ],
             xAxes: [{
               ticks: {
-                  fontColor: 'rgb(2, 108, 128)',
+                  fontColor: 'rgb(54, 112, 85)',
                   beginAtZero: false,
                   fontFamily: "Copperplate, Papyrus, fantasy"
               },
@@ -294,6 +307,9 @@ const energyOil = {
     {
       label: 'Oil',
       data: oil,
+      backgroundColor: 'rgba(144, 50, 79, 0.5)',
+      borderWidth: 1,
+      borderColor: 'black'
     }
   ]
 }
@@ -309,19 +325,19 @@ new Chart('energyOil',
           },
           fill: {
             display: true,
-            color: 'rgb(153,190,183)',
+            color: 'rgb(144, 50, 79)',
           },
           title: {
               display: true,
               text: ['Energy consumption from Oil'],
               fontFamily: "Copperplate, Papyrus, fantasy",
               fontSize: 24, 
-              fontColor: 'rgb(2, 108, 128)',
+              fontColor: 'rgb(144, 50, 79)',
           },
           scales: { 
             yAxes: [{
                 ticks: {
-                    fontColor: 'rgb(2, 108, 128)',
+                    fontColor: 'rgb(144, 50, 79)',
                     beginAtZero: true,
                     fontFamily: "Copperplate, Papyrus, fantasy"
                 },
@@ -335,7 +351,7 @@ new Chart('energyOil',
             ],
             xAxes: [{
               ticks: {
-                  fontColor: 'rgb(2, 108, 128)',
+                  fontColor: 'rgb(144, 50, 79)',
                   beginAtZero: false,
                   fontFamily: "Copperplate, Papyrus, fantasy"
               },
@@ -391,9 +407,9 @@ const data = {
   }]
 };
 
-//1. if pie button is clicked, function showPie is triggered
+//1. if pie button is clicked, function changeToPie is triggered. Bar chart changes to pie chart
 const pie = document.getElementById("pie").addEventListener("click", changeToPie);
-//1. if doughnut button is clicked, function showDoughnut is triggered
+//1. if bar button is clicked, function changeToBar is triggered. Pie chart changes to bar chart
 const bar = document.getElementById("bar").addEventListener("click", changeToBar);
 
 function changeToBar() {
@@ -404,37 +420,50 @@ function changeToBar() {
 }
 
 function changeToPie() {
+  const scales = {
+    x: {
+      display: false,
+      grid: {
+        display: false,
+      }
+    },
+    y: {
+      display: false,
+      grid: {
+        display: false,
+      }
+    }
+  }
   const updateType = 'pie'; 
   pieChart.config.type = updateType;
+  pieChart.config.options.scales = scales;
   pieChart.update();
   console.log(pieChart.config.type);
 }
-//2. showPie function runs, pie chart is created
-// const showPie = function() {
 
-  const pieChart = new Chart("solar-panels-distribution-pie",
-      {
-        type: 'pie',
-        data: data,
-        options: {
-          responsive: true,
-          maintainAspectRatio: true, 
-          plugins: {
-            legend: {
-              display: true,
-            },
+const pieChart = new Chart("solar-panels-distribution-pie",
+    {
+      type: 'pie',
+      data: data,
+      options: {
+        responsive: true,
+        maintainAspectRatio: true, 
+        plugins: {
+          legend: {
+            display: true,
           },
-          title: {
-            display: true, 
-            text: ["Distribution of Solar Panels Installed in Singapore", "(As of March 2022)"],
-            fontFamily: "Copperplate, Papyrus, fantasy",
-            fontSize: 24, 
-            fontColor: 'rgb(2, 108, 128)',
-          }, 
-        }
+        },
+        title: {
+          display: true, 
+          text: ["Distribution of Solar Panels Installed in Singapore", "(As of March 2022)"],
+          fontFamily: "Copperplate, Papyrus, fantasy",
+          fontSize: 24, 
+          fontColor: 'rgb(2, 108, 128)',
+        }, 
       }
-    )
-// }
+    }
+  )
+
 
 
 // //2. showDoughnut function runs, doughnut chart is created
@@ -472,12 +501,6 @@ function changeToPie() {
 //   chart.update();
 // }
 
-function updateScale(chart) {
-  chart.options.scales.y = {
-      type: 'logarithmic'
-  };
-  chart.update();
-}
 
 //interactive map with the number of installations of solar panels across the five regions in Singapore 
 
@@ -722,6 +745,7 @@ function showQuestion(index) {
 
     optionsContainer.appendChild(option);
     optionsContainer.appendChild(label);
+    optionsContainer.innerHTML += "<br/>";
   }
 }
 
@@ -765,3 +789,4 @@ else {
 document.getElementById("quiz-container").style.fontFamily = "Lucida Sans Typewriter", "Lucida Console", "Bitstream Vera Sans Mono";
 document.getElementById("quiz-container").style.color = "black";
 document.getElementById("quiz-container").style.textAlign = "center";
+document.getElementById("viewdata").style.textAlign = "center";
