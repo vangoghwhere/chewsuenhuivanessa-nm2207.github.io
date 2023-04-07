@@ -109,37 +109,64 @@
                 </div> -->
                 <div class="popup">
                     <img src = "resources/4 switches graphics/natural-gas.png" height="173" width="173" id="naturalgas">
+                    <h4> Natural Gas</h4>
+                    <br>
+                    <label class="switch">
+                        <input type="checkbox" id="switch1">
+                        <span class="slider round"></span>
+                    </label>
                     <span class="popuptext" id="popup-naturalgas">
+                        <h1 style="color: rgb(2, 108, 128)">Natural Gas</h1>
                         About 95% of Singapore’s electricity is generated using natural gas, the cleanest form of fossil fuel.
                     </span>
                 </div>
 
-                <div class="popup2">
+                <div class="popup">
                     <img src = "resources/4 switches graphics/solar-panel.png" height="173" width="173" id="solarpanel">
+                    <h4>Solar Panels</h4>
+                    <br>
+                    <label class="switch">
+                        <input type="checkbox" id="switch2">
+                        <span class="slider round"></span>
+                    </label>
                     <span class="popuptext" id="popup-solarpanel">
+                        <h1 style="color: rgb(2, 108, 128)">Solar Panels</h1>
                         Currently holds the top spot as the most promising renewable energy source in the near term for Singapore
                         Constraints: due to Singapore’s scarce land area, the amount of solar energy that can be harnessed is limited. 
                         Even as we work towards achieving our 2030 solar target of 2GWp, it will constitute only around 3% of the country’s total projected electricity demand in 2030.
                     </span>
                 </div>
 
-                <div class="popup3">
+                <div class="popup">
                     <img src = "resources/4 switches graphics/planet-earth.png" height="173" width="173" id="regionalpowergrids">
+                    <h4>Regional Power Grids</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="switch3">
+                        <span class="slider round"></span>
+                    </label>
                     <span class="popuptext" id="popup-regionalpowergrids">
-                        Importing electricity from regional countries 
-                        Can help accelerate the development of renewable energy projects in the region, bringing economic growth and increasing access to renewable energy
-                        Helps diversify our energy sources away from natural gas, improving energy resilience 
-                        Done through bilateral cooperation or regional initiatives.
+                        <h1 style="color: rgb(2, 108, 128)">Regional Power Grids</h1>
+                        Importing electricity from regional countries can help accelerate the development of renewable energy projects in the region, 
+                        bringing economic growth and increasing access to renewable energy.
+                        This method helps diversify our energy sources away from natural gas, improving Singapore's energy resilience. 
+                        Obtaining regional power grids are mainly done through bilateral cooperation or regional initiatives.
                     </span>
                 </div>
 
-                <div class="popup4">
+                <div class="popup">
                     <img src = "resources/4 switches graphics/co2.png" height="173" width="173" id="lowcarbonalternatives">
+                    <h4>Lower Carbon Alternatives</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="switch4">
+                        <span class="slider round"></span>
+                    </label>
                     <span class="popuptext" id="popup-lowcarbonalternatives">
-                        Importing electricity from regional countries 
-                        Can help accelerate the development of renewable energy projects in the region, bringing economic growth and increasing access to renewable energy
-                        Helps diversify our energy sources away from natural gas, improving energy resilience 
-                        Done through bilateral cooperation or regional initiatives.
+                        <h1 style="color: rgb(2, 108, 128)">Lower Carbon Alternatives</h1>
+                        Singapore is constantly exploring emerging low-carbon solutions. Lower carbon alternatives include  
+                        novel sources such as hydrogen and carbon capture, utilisation and storage (CCUS). 
+                        Depending on technological developments and the development of other energy sources, 
+                        hydrogen could supply up to half of our power needs by 2050.
+                        This would then help reduce Singapore's carbon footprint in the longer term.
                     </span>
                 </div>
 
@@ -255,7 +282,30 @@
 
             <article class="progress">
                 <h1>So, what is SG's progress thus far?</h1>
-                <p>For this data story, we will only be focusing on solar panels and electric vehicles in Singapore</p>
+                <p>
+                    Singapore is a relatively small country, with neither land space for windmills, nor a river system with fast flowing water. 
+                </p>
+                <br> 
+                <p>
+                    <strong>According to NCCS, </strong>
+                </p>
+                <ul> 
+                    <li>Commercial wind turbines operate at wind speeds of around above 4.5m/s</li>
+                    <ul>
+                        <li>In stark contrast to Singapore, where the average wind speed is only about 2m/s</li>
+                    </ul>
+                    <br>
+                    <li>Being a trade-reliant country, most of the sea space is used for ports, anchorage and shipping lanes</li>
+                    <ul>
+                        <li>This results in insufficient space for tidal power generation</li>
+                    </ul>
+                </ul>
+                <br>
+                <p> 
+                    This crosses out both wind power and hydropower respectively, leaving us with solar power. 
+                    So, how have we been leveraging the one thing we have truly unlimited access to - the sun?
+                </p>
+                <br>
                 
                 <!--Solar Panels Installations-->
                     <div id="canvas-container">
@@ -270,10 +320,10 @@
 
                 <!--Interactive element, when users select the map, an interactive map will appear with the same data, but presented differently -->
                 <p> How would you like to see this data?</p>
-                <form class="viewdata"> 
+                <form class="viewdata" id="viewdata"> 
                     <input type="button" id="pie" name="pie chart" value="Pie Chart">
                     <input type="button" id="bar" name="bar" value = "Bar chart">
-                    <input type="button" id="map" name="map" value = "Map">
+                    <!-- <input type="button" id="map" name="map" value = "Map"> -->
                 </form><br>
 
                 <!--Total Number of Installed Solar Panels over the years-->
@@ -313,6 +363,11 @@
                 <h3>Week 11 Diary Entry</h3>
                     <ul>
                     <li><a href = "https://docs.google.com/document/d/1H-MkIAqBGOI0S79jVYK0T1pfK8iU9lfe-KSbao_gYEA/edit?usp=sharing">Diary Entry</a></li>
+                    </ul>
+
+                <h3>Week 12 Diary Entry</h3>
+                    <ul>
+                    <li><a href = "https://docs.google.com/document/d/1SA_AOM-n9T0ffTyIFL3zD7eaAKr_Od-YRDkHaU2QvXE/edit?usp=sharing">Diary Entry</a></li>
                     </ul>
                 
                 <hr>
