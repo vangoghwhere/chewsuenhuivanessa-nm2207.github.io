@@ -1,49 +1,39 @@
 
-
 /* properties of individual element*/
 
 html, body {
     height:100%;
     width:100%;
     /* background-color: #4b6249; */
-    background-color: #E4E0C9;
+     background-color: #E4E0C9;
   }
-
-header {
-  margin: 10px;
-}
 
 h1 {
   color: #ED6335;
   font-size: 30px;
   text-align: center;
-  font-family: Copperplate, Papyrus, fantasy;
+  font-family: Copperplate, 'Times New Roman', Times, serif;
 }
 
 h2 {
   color:#ED6335 ;
   font-size: 20px;
   text-align: center;
-  font-family: Copperplate, Papyrus, fantasy;
+  font-family: Copperplate, 'Times New Roman', Times, serif;
 }
 
 h3 {
   color: #ECAE7D;
   font-size: 30px;
   text-align: center;
-  font-family: Copperplate, Papyrus, fantasy;
+  font-family: Copperplate, 'Times New Roman', Times, serif;
 }
 
 h4 {
   color: rgb(2, 108, 128);
-  /* text-shadow:
-  -1px 0px 0px white,
-  1px 0px 0px white,
-  0px -1px 0px white,
-  0px 1px 0px white; */
   font-size: 50px;
   text-align: center;
-  font-family: Copperplate, Papyrus, fantasy;
+  font-family: Copperplate, 'Times New Roman', Times, serif;
 }
 
 h5 {
@@ -57,24 +47,42 @@ h5 {
 h6 {
   height:100%;
   width: 100%;
-  color: #e93118;
-  font-size: 50px; 
+  color: white;
+  font-size: 100px; 
   text-align: center;
-  padding: 10px;
-  font-family: Copperplate, Papyrus, fantasy;
+  padding: 50px;
+  font-family: Copperplate, 'Times New Roman', Times, serif;
+  border-color: black;
 }
+
+.parallaxheader {
+  /* The image used */
+  background-image: url("/Users/vanessachew/Documents/NUS/Y2S2/NM2207/NM2207_finalproject/resources/headerphoto2.png");
+
+  /* Full height */
+  height: 100vh; 
+  padding: 20px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
 
 p {
   text-align: center;
   color: black;
   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
-  font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
+  font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
 }
 
 ul {
   color: black;
   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
-  font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
+  font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
 }
 
 .naturalgas {
@@ -93,13 +101,21 @@ body {
   color: black ,
 }
 
-table, th, td {
+.definition, tr, th, td { 
     border: 1px solid black;
     border-collapse: collapse;
     padding: 10px;
     color: black;
     font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
     font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
+}
+
+.tesla table, th, td {
+  border: none;
+  padding: 10px;
+  color: black;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
+  font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; 
 }
 
 * {
@@ -174,9 +190,6 @@ table, th, td {
   height: fit-content;
 }
 
-.header {
-  padding: 0px;
-}
 
 img{
   float: left;
@@ -190,7 +203,7 @@ img{
 .container {
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-gap: 10px;
+  grid-gap: 20px;
   padding: 10px;
   grid-template-rows: 50% auto 20%;
 }
@@ -209,19 +222,14 @@ img{
 }
 
 .definition {
-  grid-column: 1;
+  grid-column: 1/span 2;
   border-style: groove;
-  width: 80%;
+  width: 60%;
   margin: auto;
-}
-
-.history {
-  grid-column: 1/ span 2;
-}
+} 
 
 .fourswitches {
   grid-column: 1/span 2;
-  border-style: groove;
   width: 60%;
   margin: auto;
 }
@@ -256,6 +264,11 @@ img{
 .evcharging {
   grid-column: 1/span 2;
 }
+.evexplanation {
+  grid-column: 1/span 2;
+  width: 60%;
+  margin: auto;
+}
 .analysis {
   grid-column: 1/span 2;
   border-style: groove;
@@ -272,6 +285,32 @@ img{
 
 .tab {
   grid-column: 1/span 2;
+}
+
+.application {
+  grid-column: 1/span 2;
+  width: 60%;
+  margin: auto;
+}
+
+.lineElectric {
+  grid-column: 1/span 2;
+  width: 60%;
+  margin: auto;
+}
+
+.references {
+  grid-column: 1/span 2;
+  width: 60%;
+  margin: auto;
+  border-style: groove;
+}
+
+.diaryentry {
+  grid-column: 1/span 2;
+  width: 60%;
+  margin: auto;
+  border-style: groove;
 }
 
 
