@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 
+
 <html>
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         <link rel="stylesheet" type="text/css" href="css/appstyle.css">
-        <title>van's prototype hoho</title>
+        <title>Renewable Energy in Singapore</title>
         <script defer type="text/javascript" src="appscripts/main.js">
         </script>
 
-        <!-- <style>
-        body {
-        background-image: url();
-        }
-        </style> -->
     </head>
 
     <body>
-        <div class="header">
-            <h6>Renewable Energy in Singapore </h6>
-        </div>
+        <header>
+            <div class="parallaxheader">
+
+                <div class="headertitle">
+                    <h6>Renewable Energy in Singapore  </h6>
+                </div>
+
+            </div>
+
+        </header>
 
         <div class="container">
 
@@ -31,8 +35,7 @@
                 <br><br>
                     Closer to home, the Singapore government has also launched the SG Green Plan 2030 in 2021, 
                     with a set of targets to turn Singapore into a cleaner and greener country. 
-                    But as the stipulated deadline looms, I aim to find out what is Singapore's progress in making those targets a reality, 
-                    and if a massive change such as turning to renewable energy is worth it.  
+                    But as the stipulated deadline looms, I aim to find out what is Singapore's progress in making those targets a reality. 
                 </p>
             </article>
 
@@ -42,7 +45,7 @@
                 <h1>Aren't they the same? </h1>
                 <p>Well, there is a difference actually. </p>
                 <!-- do table on definitions -->
-                <table style="width:100%" id="table">
+                <table class = "definition" style="width:100%">
                     <tr>
                     <th>Clean Energy</th>
                     <th>Green Energy</th>
@@ -73,29 +76,6 @@
                 </p>
             </article>
 
-            <article class="history">
-                <!-- history of renewable energy-->
-                <h1> Blast to the Past: A brief history of Renewable Energy </h1>
-                    <p>
-                        Let’s rewind to the 1900s, and visit some milestones Singapore has achieved in the area of renewable energy! 
-                    </p>
-                    <!-- <div class="timeline">
-                        <div class="container left">
-                        <div class="content">
-                            <h2>2017</h2>
-                            <p>Lorem ipsum..</p>
-                        </div>
-                        </div>
-                        <div class="container right">
-                        <div class="content">
-                            <h2>2016</h2>
-                            <p>Lorem ipsum..</p>
-                        </div>
-                        </div>
-                    </div> -->
-
-            </article>
-
             <article class="fourswitches">
                 <h1> Singapore's Four Switches</h1>
                 <p>
@@ -107,7 +87,7 @@
                 <!-- <div id="natural-gas"> 
                     <img src = "resources/4 switches graphics/gas.png" height="200" width="200" id="naturalgas">
                 </div> -->
-                <div class="popup">
+                <div class="popup" style="position: relative; height:38vh; width:48vw">
                     <img src = "resources/4 switches graphics/natural-gas.png" height="173" width="173" id="naturalgas">
                     <h4> Natural Gas</h4>
                     <br>
@@ -117,11 +97,13 @@
                     </label>
                     <span class="popuptext" id="popup-naturalgas">
                         <h1 style="color: rgb(2, 108, 128)">Natural Gas</h1>
+                        Natural gas is a fossil fuel. Similar to other fossil fuels such as coal and oil, natural gas forms from plants, 
+                        animals, and microorganisms that lived on earth millions of years ago.
                         About 95% of Singapore’s electricity is generated using natural gas, the cleanest form of fossil fuel.
                     </span>
                 </div>
 
-                <div class="popup">
+                <div class="popup" style="position: relative; height:38vh; width:48vw">
                     <img src = "resources/4 switches graphics/solar-panel.png" height="173" width="173" id="solarpanel">
                     <h4>Solar Panels</h4>
                     <br>
@@ -137,7 +119,7 @@
                     </span>
                 </div>
 
-                <div class="popup">
+                <div class="popup" style="position: relative; height:41vh; width:48vw">
                     <img src = "resources/4 switches graphics/planet-earth.png" height="173" width="173" id="regionalpowergrids">
                     <h4>Regional Power Grids</h4>
                     <label class="switch">
@@ -153,7 +135,7 @@
                     </span>
                 </div>
 
-                <div class="popup">
+                <div class="popup" style="position: relative; height:41vh; width:48vw">
                     <img src = "resources/4 switches graphics/co2.png" height="173" width="173" id="lowcarbonalternatives">
                     <h4>Lower Carbon Alternatives</h4>
                     <label class="switch">
@@ -182,13 +164,6 @@
                     Find out more on the official website <a href = "https://www.greenplan.gov.sg/" target="_blank"> here</a>!
                 </p><br>
 
-                <!-- img src = https://www.greenplan.gov.sg/cos/
-                <div class = "infographic">
-                    <img src = "resources/SG Green Plan 2030 infographic.png" height = "300" width = "500">
-                </div> <br> -->
-
-                <!-- Idk why the image overlaps with the text-->
-
                 <div>
                 <h2> Key targets for SGP2030</h2>
                 <ul>
@@ -210,44 +185,15 @@
             <article class = "consumptionlevels">
             <!-- area chart of consumption levels -->
                 <h1>Singapore's energy consumption from various energy sources over the years</h1>
-                <!--<form id="form1"> 
-                    <input type="radio" id="geobiomass" name="Gio Biomass">
-                    <label for="geobiomass">Geo Biomass consumption</label> 
-
-                    <input type="radio" id="solarpower" name="Solar Power">
-                    <label for="solarpower">Solar consumption</label>
-
-                    <input type="radio" id="gas" name="Gas">
-                    <label for="Gas">Gas consumption</label>
-
-                    <input type="radio" id="coal" name="Coal">
-                    <label for="coal">Coal consumption</label>
-
-                    <input type="radio" id="oil" name="Oil">
-                    <label for="oil">Oil consumption</label>
-
-                    <input type="radio" id="all" name="All">
-                    <label for="all">All sources</label>
-                </form>
-                <br>  -->
-
-                
             </article>
 
             <!-- Tab links -->
             <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'Beijing')">All sources</button>
                 <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Geo Biomass</button>
                 <button class="tablinks" onclick="openCity(event, 'Paris')">Solar Power</button>
                 <button class="tablinks" onclick="openCity(event, 'Tokyo')">Gas</button>
                 <button class="tablinks" onclick="openCity(event, 'Singapore')">Coal</button>
                 <button class="tablinks" onclick="openCity(event, 'Malaysia')">Oil</button>
-            </div>
-
-            <!-- Tab content -->
-            <div id="Beijing" class="tabcontent">
-                <h3>All sources (stacked area chart)</h3>
-                <p>insert chart here</p>
             </div>
 
             <div id="London" class="tabcontent">
@@ -281,14 +227,14 @@
             </div>
 
             <article class="progress">
-                <h1>So, what is SG's progress thus far?</h1>
+                <h1>Shining a Light on Sustainability</h1>
                 <p>
                     Singapore is a relatively small country, with neither land space for windmills, nor a river system with fast flowing water. 
                 </p>
                 <br> 
-                <p>
-                    <strong>According to NCCS, </strong>
-                </p>
+                <h2>
+                    According to the National Climate Change Secretariat (NCCS),
+                </h2>
                 <ul> 
                     <li>Commercial wind turbines operate at wind speeds of around above 4.5m/s</li>
                     <ul>
@@ -313,26 +259,18 @@
                     </div>
                     <br> 
 
-                    <!-- <div id="canvas-container">
-                        <canvas id="solar-panels-distribution-donut" style="position: relative; height:50vh; width:50vw"></canvas>
-                    </div>
-                    <br> -->
-
                 <!--Interactive element, when users select the map, an interactive map will appear with the same data, but presented differently -->
                 <p> How would you like to see this data?</p>
                 <form class="viewdata" id="viewdata"> 
                     <input type="button" id="pie" name="pie chart" value="Pie Chart">
                     <input type="button" id="bar" name="bar" value = "Bar chart">
-                    <!-- <input type="button" id="map" name="map" value = "Map"> -->
-                </form><br>
+                </form>
+                <br>
 
                 <!--Total Number of Installed Solar Panels over the years-->
                     <div id="canvas-container">
                         <canvas id="solarPanelNumber" ></canvas>
                     </div>
-                    
-                    <br>
-                    <p>insert paragraph/description here</p>
                     <br>
 
                 <!--Total Installed Capacity of Solar Panels over the years-->
@@ -341,56 +279,26 @@
                     </div>
 
                     <br> 
-                    <p>insert paragraph/description here</p>
+                    <p>
+                        As seen from the graphs above, the number of solar panels installed in Singapore has been on the rise, 
+                        from 30 in 2008 to 5,455 in the first quarter of 2022. In the same vein, the capacity of solar panels have also increased, 
+                        from 0.4MWp in 2008 to 670MWp in the first quarter of 2022. 
+                    </p>
+                    <br>
+                    <p>
+                        As solar panels continue to be installed all across Singapore, from HDB rooftops to our local water bodies, 
+                        such as at Tengeh Reservoir, we can expect to see an even greater expansion in the amount and use of solar 
+                        panels in the years to come. 
+                    </p>
                     <br>
 
             </article>
 
             <!--A little quiz section! On fun facts about renewable energy in Singapore-->
             <aside class="sidebar">
-
-                <h3>Week 9 Diary Entries</h3>
-                    <ul>
-                    <li><a href="https://docs.google.com/document/d/1WFyHeThV96uh7s_WmGIoTCW7YIw8oa90dtslhhFabKo/edit?usp=sharing"> Final Project Storyboard</a></li><br>
-                    <li><a href="https://docs.google.com/document/d/1MMPPsC4Q321FzxltAP03o7XSWP_s1GUez9V2Or1Qo30/edit?usp=sharing"> Project documentation (with concepts from week 2-8 to use in final code)</a></li>
-                    </ul>
-
-                <h3>Week 10 Diary Entry</h3>
-                    <ul>
-                    <li><a href = "https://docs.google.com/document/d/1tm3TR8d5NqmOXpmjW0gsUl9et1ewUhS2h0VkQ8KpS8E/edit?usp=sharingWeek">Diary Entry (Q1-5)</a></li>
-                    </ul>
-
-                <h3>Week 11 Diary Entry</h3>
-                    <ul>
-                    <li><a href = "https://docs.google.com/document/d/1H-MkIAqBGOI0S79jVYK0T1pfK8iU9lfe-KSbao_gYEA/edit?usp=sharing">Diary Entry</a></li>
-                    </ul>
-
-                <h3>Week 12 Diary Entry</h3>
-                    <ul>
-                    <li><a href = "https://docs.google.com/document/d/1SA_AOM-n9T0ffTyIFL3zD7eaAKr_Od-YRDkHaU2QvXE/edit?usp=sharing">Diary Entry</a></li>
-                    </ul>
-                
                 <hr>
 
                 <h1>Test your knowledge!</h1>
-
-                <!-- <div class="question1">
-                 <p>How many EV charging stations have been installed in Singapore thus far?</p>
-                 <form id = "quiz">
-                    <input type="radio" id="2000" name="2000" value = "2000" style="color: black;">
-                    <label for="2000">2000</label> <br>
-                    <input type="radio" id="3000" name="3000" value = "3000" class = "option">
-                    <label for="3000">3000</label> <br>
-                    <input type="radio" id="4000" name="4000" value = "4000" class = "option">
-                    <label for="4000">4000</label> <br>
-                    <input type="radio" id="5000" name="5000" value = "5000" class = "option">
-                    <label for="5000">5000</label>
-                    
-                    <br><br>
-                    <input type="button" id="submit" name="submit" value="Submit!">
-                 </form>
-                </div> -->
-                
                 <div id = "quiz-container"> 
                     <div id = "question"></div> <br> 
                     <div id = "options"></div> <br>
@@ -400,32 +308,301 @@
             </aside>
 
             <!--Electric Vehicles-->
+
             <article class="evcharging" >
-                <h2>Let's take a look at the Electric Vehicle scene in Singapore!</h2>
-                <p><img src="resources/vector graphics/electricvehicle.png" id="foo" height="400" width="400">
-                    As of 2022, there have been 3000 EV charging points installed all around Singapore! Looks like we still have a long way to go...
+                <h1>
+                    Singapore's Drive Towards Electric Vehicles
+                </h1>
+                <p>
+                    <img src="resources/vector graphics/electricvehicle.png" id="foo" height="400" width="400">
                     <!--Bar chart for the current number of electric vehicles (but it's not working haha)-->
-                    <div id="canvas-container" style="display: flex">
+                    <div id="canvas-container" style="display: flex; position: relative; height:30vh; width:50vw">
                         <canvas id="electricVehicle"></canvas>
                     </div>
-                    </p>
+                </p>
+            </article>
 
+            <article class="evexplanation">
+                <p>
+                    As of March 2023, there are around 2,000 charging points available in Singapore, 
+                    including both public and private charging stations. 
+                    This means that there is still a long way to go to reach the ambitious target of 60,000 charging points by 2030. 
+                </p><br>
+                <p>
+                    However, with the government's continued efforts and support, 
+                    it is hoped that Singapore will be able to achieve this target and further promote the adoption 
+                    of electric vehicles in the country.
+                </p><br>
+                <h2>
+                    So, who are the big players in the EV scene in Singapore?
+                </h2>
+                <br><br>
+                <hr>
+                <br>
+
+                <table class = "tesla" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/Teslalogo.png" height = "250vh"></th>
+                    <th> 
+                        Tesla is a well-known American electric vehicle company that has a presence in Singapore,
+                        albeit relatively small compared to other countries. 
+                        Tesla began selling its electric vehicles in Singapore in 2017, and it currently offers several models, 
+                        including the Model S, Model X, and Model 3.
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "bluesg" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/BlueSGLogo.png" height = "150vh"></th>
+                    <th> 
+                        <ul>
+                            <li>Singapore-based electric car-sharing service </li>
+                            <li>Offers a fleet of electric vehicles for short-term rental</li>
+                            <li>
+                                Launched in 2017, in partnership with the Land Transport Authority (LTA) and Economic Development Board (EDB), 
+                                as part of efforts to make Singapore’s transport system more sustainable
+                            </li>
+                            <li>Currently, the company has more than 1,000 electric cars in its fleet </li>
+                            <li>BlueSG cars are 100% electric, and can run up to 200 km on a single charge</li>
+                                
+                        </ul>    
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "charge+" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/chargeplus.png" height = "180vh"></th>
+                    <th> 
+                        <ul>
+                            <li>Operates a network of electric vehicle (EV) charging stations across the country</li>
+                            <li>One of the largest EV charging network operators in Singapore</li>
+                            <li>
+                                Also offers a mobile application that allows electric vehicle owners to locate charging stations, 
+                                reserve charging slots, and make payments through the app
+                            </li>
+                                
+                        </ul>                     
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "greenlots" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/greenlots.svg" height = "180vh"></th>
+                    <th> 
+                        <ul>
+                            <li>EV charging company based in Los Angeles, under Shell Group</li>
+                            <li>Established in 2008, and has since expanded its operations globally, including Singapore</li>
+                            <li>
+                                Provides subscription-based packages that allows you to pay a monthly fee over a fixed term 
+                                rather than the full upfront cost at the beginning
+                            </li>
+                            <li>
+                                Offers a cloud-based platform that allows charging station owners and operators to remotely 
+                                manage their charging infrastructure
+                            </li>
+                    
+                        </ul>
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+        
+                <table class = "tribecar" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/tribecar-logo.png" height = "180vh"></th>
+                    <th> 
+                        <ul>
+                            <li>Car-sharing service that operates a fleet of electric and hybrid vehicles in Singapore</li>
+                            <li>Users can rent the vehicles on an hourly or daily basis through the TribeCar app</li>
+                            <li>currently has more than 1,300 vehicles across the country</li>
+                        </ul>
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "grabwheels" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/grabwheels.png" height = "230vh"></th>
+                    <th> 
+                        <ul>
+                            <li>Electric cars are not the only vehicles that we see!</li>
+                            <li>Grab, a ride-hailing company, launched GrabWheels in 2019, which is an electric scooter-sharing service</li>
+                            <li>Users can rent electric scooters through the Grab app and use them to travel short distances</li>
+                        </ul>
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <p>
+                    Have you spotted any of these electric vehicles or charging points in your vicinity? 
+                    Well, these are just the tip of the iceberg in Singapore’s EV scene. 
+                    But other than for private use, where can EVs be seen in the public sector?
+                </p>
+                <br> 
+                <p> Here are some examples of how EVs will be or are being used on a large scale in Singapore!</p><br>
+
+                <table class = "nusbus" style="width:100%">
+                    <tr>
+                    <th><img src ="resources/nusbus.webp" height = "200vh"></th>
+                    <th> 
+                        ComfortDelGro has begun operating the new electric bus fleet in NUS, 
+                        replacing the old fleet of shuttle buses that ran on petrol. Hurray to quieter bus rides!
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "smrttaxi" style="width:100%">
+                    <tr>
+                    <th><img src ="resources/taxi.jpg" height = "200vh"></th>
+                    <th> 
+                        SMRT has plans to replace its entire taxi fleet with electric taxis. 
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "singpost" style="width:100%">
+                    <tr>
+                    <th><img src ="resources/singpost.webp" height = "200vh"></th>
+                    <th> 
+                        SingPost has begun its pilot testing on the use of three-wheel electric scooters and vans to deliver mail. 
+                        According to the Straits Times, it has plans to replace all of its lighter delivery vehicles with their electric counterparts by 2026. 
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+            </article>
+
+            <article class ="lineElectric">
+                <p> 
+                    Lastly, let's take a look at the electric vehicle population in Singapore over the years. 
+                    Click on the legend to remove the specific dataset from the graph and view each vehicle type separately! 
+                </p>
+                <div id="canvas-container">
+                    <canvas id="linechartElectric" style="position: relative; height:50vh; width:50vw"></canvas>
+                </div>
+                <br>
+                <p> 
+                    From here, we can see that the number of electric vehicles used by Singaporeans has increased exponentially, 
+                    although they still constitute a small proportion of the total motor vehicles used in Singapore. 
+                    Yet, we can continue to expect that with an even greater increase in awareness of the benefits of electric vehicles, 
+                    as well as the proliferation of electric vehicle suppliers with the continued support from the government, 
+                    these numbers are bound to increase even more. 
+                </p>
             </article>
             
-            <!--Analysis -->
-            <article class="analysis" >
-                <h1>Analysis</h1>
-                <p> answer problem question here</p>
-            </article>
-
             <!--conclusion-->
             <article class="conclusion" >
                 <h1>Conclusion</h1>
-                <p> to be confirmed</p>
+                <p> 
+                    We began by asking the question, "How has Singapore progressed in transitioning to renewable energy, 
+                    and how close is it to achieving its SGP2030 targets?"
+                </p><br>
+                <p>
+                    After addressing common misconceptions in the different types of energy, exploring Singapore's main energy sources and delving into
+                    Singapore's current consumption patterns over the years, Singapore still seems to be a far cry from achieving its SGP2030 goals
+                    at the current moment. 
+                </p><br>
+                <p>
+                    Yet, not all is lost, as we’ve seen some huge leaps in the renewable energy sector, 
+                    especially with regards to solar energy and electric vehicles. 
+                    For a land scarce city-state as Singapore, the targets may still seem ambitiously high for now, 
+                    but we can expect to see greater steps taken by the government and relevant sectors as they sign more 
+                    leases in the coming years to enable improvements in renewable energy infrastructure.
+                </p><br>
+                <p>
+                    Feel like you've learnt a thing or two from this data story? Go back up to the top and reattempt the quiz section again, 
+                    if you haven't done so already!
+                </p><br><br>
+
+            </article>
+
+            <article class ="references"> 
+                <h1>References</h1>
+                <p> This data story would not have come through if not for the many sources that have been made readily available for us. 
+                    Below are the sources used!
+                </p><br>
+                <p>
+                <ul id="referencelist">
+                    <li>Electric vehicle journey in 2021. (2021, December 29). The Straits Times. https://www.straitstimes.com/singapore/transport/singapores-electric-vehicle-journey-in-2021 </li>
+                    <li>What is green energy? (n.d.). National Grid. https://www.nationalgrid.com/stories/energy-explained/what-is-green-energy</li>
+                    <li>Energy reset. (n.d.). Green Plan. https://www.greenplan.gov.sg/key-focus-areas/energy-reset/</li>
+                    <li>Renewable Energy Singapore. (n.d.). EnergyTracker Asia. https://energytracker.asia/renewable-energy-singapore/</li>
+                    <li>What sources does the country get its energy from? (n.d.). Our World in Data. https://ourworldindata.org/energy/country/singapore#what-sources-does-the-country-get-its-energy-from</li>
+                    <li>Singapore's approach to alternative energy. (n.d.). National Climate Change Secretariat. https://tinyurl.com/yjandedj</li><br><br>
+                    <li><strong>Graphics: </strong></li>
+                        <ul>
+                            <li>Flaticon. (n.d.). https://www.flaticon.com/</li>
+                        </ul><br><br>
+                    <li><strong>Data:</strong></li>
+                        <ul>
+                            <li>Singapore Energy Statistics 2021. (n.d.). Energy Market Authority. https://www.ema.gov.sg/singapore-energy-statistics/Ch06/index6</li>
+                            <li>SES Public 2022. (n.d.). Energy Market Authority. https://www.ema.gov.sg/assets/stat_table/SES_Public_2022.xlsx</li>
+                            <li>Singapore now has over 3,000 public EV charging points with more to be installed, says country’s LTA. (2022, September 5). Paul Tan's Automotive News. https://paultan.org/2022/09/05/singapore-now-has-over-3000-public-ev-charging-points-with-more-to-be-installed-says-countrys-lta/</li>
+                            <li>MVP by Fuel Type. (2022). Land Transport Authority. https://tinyurl.com/2p9dryy8</li>
+                        </ul><br>
+                    <li><strong>Coding guide:</strong></li>
+                        <ul>
+                            <li>W3Schools. (n.d.). https://www.w3schools.com/</li>
+                            <li>Simple Steps Code. (n.d.). JavaScript Quiz Tutorial. Retrieved from https://simplestepscode.com/javascript-quiz-tutorial/</li>
+                            <li>Grasshopper. (n.d.). Grasshopper: Learn to Code for Free. Retrieved from https://learn.grasshopper.app/</li>
+                        </ul>
+                </ul>
+                </p>
+            </article>
+
+            <article class ="diaryentry">
+                <h3>Diary Entries</h3>
+                <ul>
+                    <li>Week 9 Diary Entries</li>
+                        <ul>
+                            <li><a href="https://docs.google.com/document/d/1WFyHeThV96uh7s_WmGIoTCW7YIw8oa90dtslhhFabKo/edit?usp=sharing"> Final Project Storyboard</a></li>
+                            <li><a href="https://docs.google.com/document/d/1MMPPsC4Q321FzxltAP03o7XSWP_s1GUez9V2Or1Qo30/edit?usp=sharing"> Project documentation (with concepts from week 2-8 to use in final code)</a></li>
+                        </ul><br>
+
+                    <li>Week 10 Diary Entry</li>
+                        <ul>
+                            <li><a href = "https://docs.google.com/document/d/1tm3TR8d5NqmOXpmjW0gsUl9et1ewUhS2h0VkQ8KpS8E/edit?usp=sharingWeek">Diary Entry (Q1-5)</a></li>
+                        </ul><br>
+
+                    <li>Week 11 Diary Entry</li>
+                        <ul>
+                            <li><a href = "https://docs.google.com/document/d/1H-MkIAqBGOI0S79jVYK0T1pfK8iU9lfe-KSbao_gYEA/edit?usp=sharing">Diary Entry</a></li>
+                        </ul><br>
+
+                    <li>Week 12 Diary Entry</li>
+                        <ul>
+                            <li><a href = "https://docs.google.com/document/d/1SA_AOM-n9T0ffTyIFL3zD7eaAKr_Od-YRDkHaU2QvXE/edit?usp=sharing">Diary Entry</a></li>
+                        </ul><br>
+
+                    <li>Final Write Up</li>
+                        <ul>
+                            <li><a href ="https://docs.google.com/document/d/1ey7yRCXMowfCh4g_LAHEA6iT1fxKGyubuPmlrIlHr74/edit?usp=sharing"> Click here</a></li>
+                        </ul>
+                
             </article>
 
         </div>
-
     
     </body>
+
 </html>
