@@ -87,8 +87,7 @@ ul {
 }
 
 .naturalgas {
-  display: block;
-  margin: auto;
+  overflow: hidden;
 }
 
 #options {
@@ -307,13 +306,35 @@ img{
   border-style: groove;
 }
 
-.diaryentry {
-  grid-column: 1/span 2;
-  width: 60%;
-  margin: auto;
-  border-style: groove;
+#teslapic {
+    max-width: 100%;
+    height: auto;
 }
 
+#bluesgpic {
+  max-width: 100%;
+  height: auto;
+}
+
+#chargepic {
+  max-width: 100%;
+  height: auto;
+}
+
+#greenlotspic {
+  max-width: 100%;
+  height: auto;
+}
+
+#tribecarpic {
+  max-width: 100%;
+  height: auto;
+}
+
+#grabwheelspic {
+  max-width: 100%;
+  height: auto;
+}
 
 /*POPUP CSS*/
 /* Popup container - can be anything you want */
