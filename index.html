@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <title>Renewable Energy in Singapore</title>
+        <script defer type="text/javascript" src="appscripts/main.js">
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+            <div class="parallaxheader">
+
+                <div class="headertitle">
+                    <h6>Renewable Energy in Singapore  </h6>
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="container">
+
+            <article class="introduction">
+                <h1> Introduction </h1>
+                <p> 
+                    There has been a lot of hype in recent years regarding renewable energy, 
+                    with activists such as Greta Thunberg spearheading protests against practices that are harmful to the environment, 
+                    and governments pledging to turn away from fossil fuels to utilise more renewable sources of energy. 
+                <br><br>
+                    Closer to home, the Singapore government has also launched the SG Green Plan 2030 in 2021, 
+                    with a set of targets to turn Singapore into a cleaner and greener country. 
+                    But as the stipulated deadline looms, I aim to find out what is Singapore's progress in making those targets a reality. 
+                </p>
+            </article>
+
+            <article class="definition">
+                <!-- define clean energy, green energy, renewable energy-->
+                <h1>Renewable, Clean and Green Energy</h1>
+                <h1>Aren't they the same? </h1>
+                <p>Well, there is a difference actually. </p>
+                <!-- do table on definitions -->
+                <table class = "definition" style="width:100%">
+                    <tr>
+                    <th>Clean Energy</th>
+                    <th>Green Energy</th>
+                    <th>Renewable Energy</th>
+                    </tr>
+                    <tr>
+                    <td>Clean energy produces electricity without emissions.</td>
+                    <td>Green energy comes from totally natural sources, which have low or no environmental impact in their creation or use.</td>
+                    <td>Energy derived from natural sources that are replenished at a higher rate than they are consumed</td>
+                    </tr>
+                </table><br>
+                <p>Do they sound similar? Well, a key difference is that while most green energy sources are also renewable, 
+                    not all renewable energy sources are considered entirely green.
+                </p>
+                <p>
+                    Take hydropower for example. Hydropower involves the use of water to generate electricity, and is thus considered a form of renewable energy source. 
+                    However, many have argued that hydropower cannot be considered a form green energy due to the industrialisation and large amounts of deforestation
+                    needed to build the massive hydro dams. 
+                </p>
+
+                <p>
+                    Some examples of green energy sources that are also sources of renewable energy include: 
+                    <ul id="energylist">
+                        <li>Solar energy</li>
+                        <li>Wind energy</li>
+                        <li>Geothermal energy</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="fourswitches">
+                <h1> Singapore's Four Switches</h1>
+                <p>
+                    Just as how we have the four National taps in Singapore, 
+                    we also harness four Switches that regulate our energy supply, while promoting energy efficiency. 
+                    Click on each switch to find out more!
+                </p><br>
+
+                <!-- <div id="natural-gas"> 
+                    <img src = "resources/4 switches graphics/gas.png" height="200" width="200" id="naturalgas">
+                </div> -->
+                <div class="popup" style="position: relative; height:38vh; width:48vw">
+                    <img src = "resources/4 switches graphics/natural-gas.png" height="173" width="173" id="naturalgas">
+                    <h4> Natural Gas</h4>
+                    <br>
+                    <label class="switch">
+                        <input type="checkbox" id="switch1">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="popuptext" id="popup-naturalgas">
+                        <h1 style="color: rgb(2, 108, 128)">Natural Gas</h1>
+                        Natural gas is a fossil fuel. Similar to other fossil fuels such as coal and oil, natural gas forms from plants, 
+                        animals, and microorganisms that lived on earth millions of years ago.
+                        About 95% of Singapore’s electricity is generated using natural gas, the cleanest form of fossil fuel.
+                    </span>
+                </div>
+
+                <div class="popup" style="position: relative; height:38vh; width:48vw">
+                    <img src = "resources/4 switches graphics/solar-panel.png" height="173" width="173" id="solarpanel">
+                    <h4>Solar Panels</h4>
+                    <br>
+                    <label class="switch">
+                        <input type="checkbox" id="switch2">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="popuptext" id="popup-solarpanel">
+                        <h1 style="color: rgb(2, 108, 128)">Solar Panels</h1>
+                        Currently holds the top spot as the most promising renewable energy source in the near term for Singapore
+                        Constraints: due to Singapore’s scarce land area, the amount of solar energy that can be harnessed is limited. 
+                        Even as we work towards achieving our 2030 solar target of 2GWp, it will constitute only around 3% of the country’s total projected electricity demand in 2030.
+                    </span>
+                </div>
+
+                <div class="popup" style="position: relative; height:41vh; width:48vw">
+                    <img src = "resources/4 switches graphics/planet-earth.png" height="173" width="173" id="regionalpowergrids">
+                    <h4>Regional Power Grids</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="switch3">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="popuptext" id="popup-regionalpowergrids">
+                        <h1 style="color: rgb(2, 108, 128)">Regional Power Grids</h1>
+                        Importing electricity from regional countries can help accelerate the development of renewable energy projects in the region, 
+                        bringing economic growth and increasing access to renewable energy.
+                        This method helps diversify our energy sources away from natural gas, improving Singapore's energy resilience. 
+                        Obtaining regional power grids are mainly done through bilateral cooperation or regional initiatives.
+                    </span>
+                </div>
+
+                <div class="popup" style="position: relative; height:41vh; width:48vw">
+                    <img src = "resources/4 switches graphics/co2.png" height="173" width="173" id="lowcarbonalternatives">
+                    <h4>Lower Carbon Alternatives</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="switch4">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="popuptext" id="popup-lowcarbonalternatives">
+                        <h1 style="color: rgb(2, 108, 128)">Lower Carbon Alternatives</h1>
+                        Singapore is constantly exploring emerging low-carbon solutions. Lower carbon alternatives include  
+                        novel sources such as hydrogen and carbon capture, utilisation and storage (CCUS). 
+                        Depending on technological developments and the development of other energy sources, 
+                        hydrogen could supply up to half of our power needs by 2050.
+                        This would then help reduce Singapore's carbon footprint in the longer term.
+                    </span>
+                </div>
+
+            </article>
+
+            <article class="SGgreenplan">
+                <!-- what is sg green plan-->
+                <h1>SG Green Plan 2030</h1>
+                <!-- include link to the official govt page-->
+                <p>
+                    The Singapore Green Plan 2030, or the Green Plan, is a nation-wide movement to advance Singapore’s national agenda on sustainable development.
+                    <br><br>
+                    Find out more on the official website <a href = "https://www.greenplan.gov.sg/" target="_blank"> here</a>!
+                </p><br>
+
+                <div>
+                <h2> Key targets for SGP2030</h2>
+                <ul>
+                    <li>Solar Energy</li>
+                        <ul>
+                            <li>Increase solar energy deployment by five-fold to at least 2GWp</li>
+                            <li>1.5 GWp by 2025</li>
+                        </ul>
+                        <br>
+                    <li>Cleaner-energy Vehicles</li>
+                        <ul>
+                            <li>8 EV-Ready Towns with chargers at all HDB carparks by 2025</li>
+                            <li>60,000 charging points nationwide by 2030, including 40,000 in public carparks and 20,000 in - private premises</li>
+                        </ul>
+                </ul>
+                <br> 
+            </article>
+
+            <article class = "consumptionlevels">
+            <!-- area chart of consumption levels -->
+                <h1>Singapore's energy consumption from various energy sources over the years</h1>
+            </article>
+
+            <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Geo Biomass</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Solar Power</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Gas</button>
+                <button class="tablinks" onclick="openCity(event, 'Singapore')">Coal</button>
+                <button class="tablinks" onclick="openCity(event, 'Malaysia')">Oil</button>
+            </div>
+
+            <div id="London" class="tabcontent">
+                <div id="canvas-container">
+                    <canvas id="energyGB"></canvas>
+                </div>
+            </div>
+            
+            <div id="Paris" class="tabcontent">
+                <div id="canvas-container">
+                    <canvas id="energySolar"></canvas>
+                </div>
+            </div>
+            
+            <div id="Tokyo" class="tabcontent">
+                <div id="canvas-container">
+                    <canvas id="energyGas"></canvas>
+                </div>
+            </div>
+
+            <div id="Singapore" class="tabcontent">
+                <div id="canvas-container">
+                    <canvas id="energyCoal"></canvas>
+                </div>
+            </div>
+
+            <div id="Malaysia" class="tabcontent">
+                <div id="canvas-container">
+                    <canvas id="energyOil"></canvas>
+                </div>
+            </div>
+
+            <article class="progress">
+                <h1>Shining a Light on Sustainability</h1>
+                <p>
+                    Singapore is a relatively small country, with neither land space for windmills, nor a river system with fast flowing water. 
+                </p>
+                <br> 
+                <h2>
+                    According to the National Climate Change Secretariat (NCCS),
+                </h2>
+                <ul> 
+                    <li>Commercial wind turbines operate at wind speeds of around above 4.5m/s</li>
+                    <ul>
+                        <li>In stark contrast to Singapore, where the average wind speed is only about 2m/s</li>
+                    </ul>
+                    <br>
+                    <li>Being a trade-reliant country, most of the sea space is used for ports, anchorage and shipping lanes</li>
+                    <ul>
+                        <li>This results in insufficient space for tidal power generation</li>
+                    </ul>
+                </ul>
+                <br>
+                <p> 
+                    This crosses out both wind power and hydropower respectively, leaving us with solar power. 
+                    So, how have we been leveraging the one thing we have truly unlimited access to - the sun?
+                </p>
+                <br>
+                
+                <!--Solar Panels Installations-->
+                    <div id="canvas-container">
+                        <canvas id="solar-panels-distribution-pie" style="position: relative; height:50vh; width:50vw"></canvas>
+                    </div>
+                    <br> 
+
+                <!--Interactive element, when users select the map, an interactive map will appear with the same data, but presented differently -->
+                <p> How would you like to see this data?</p>
+                <form class="viewdata" id="viewdata"> 
+                    <input type="button" id="pie" name="pie chart" value="Pie Chart">
+                    <input type="button" id="bar" name="bar" value = "Bar chart">
+                </form>
+                <br>
+
+                <!--Total Number of Installed Solar Panels over the years-->
+                    <div id="canvas-container">
+                        <canvas id="solarPanelNumber" ></canvas>
+                    </div>
+                    <br>
+
+                <!--Total Installed Capacity of Solar Panels over the years-->
+                    <div id="canvas-container">
+                        <canvas id="solarPanelMwp"></canvas>
+                    </div>
+
+                    <br> 
+                    <p>
+                        As seen from the graphs above, the number of solar panels installed in Singapore has been on the rise, 
+                        from 30 in 2008 to 5,455 in the first quarter of 2022. In the same vein, the capacity of solar panels have also increased, 
+                        from 0.4MWp in 2008 to 670MWp in the first quarter of 2022. 
+                    </p>
+                    <br>
+                    <p>
+                        As solar panels continue to be installed all across Singapore, from HDB rooftops to our local water bodies, 
+                        such as at Tengeh Reservoir, we can expect to see an even greater expansion in the amount and use of solar 
+                        panels in the years to come. 
+                    </p>
+                    <br>
+
+            </article>
+
+            <!--A little quiz section! On fun facts about renewable energy in Singapore-->
+            <aside class="sidebar">
+                <hr>
+
+                <h1>Test your knowledge!</h1>
+                <div id = "quiz-container"> 
+                    <div id = "question"></div> <br> 
+                    <div id = "options"></div> <br>
+                    <button id = "submit"> Submit!</button>
+                </div>
+
+            </aside>
+
+            <!--Electric Vehicles-->
+
+            <article class="evcharging" >
+                <h1>
+                    Singapore's Drive Towards Electric Vehicles
+                </h1>
+                <p>
+                    <img src="resources/vector graphics/electricvehicle.png" id="foo" height="400" width="400">
+                    <!--Bar chart for the current number of electric vehicles (but it's not working haha)-->
+                    <div id="canvas-container" style="display: flex; position: relative; height:30vh; width:50vw">
+                        <canvas id="electricVehicle"></canvas>
+                    </div>
+                </p>
+            </article>
+
+            <article class="evexplanation">
+                <p>
+                    As of March 2023, there are around 2,000 charging points available in Singapore, 
+                    including both public and private charging stations. 
+                    This means that there is still a long way to go to reach the ambitious target of 60,000 charging points by 2030. 
+                </p><br>
+                <p>
+                    However, with the government's continued efforts and support, 
+                    it is hoped that Singapore will be able to achieve this target and further promote the adoption 
+                    of electric vehicles in the country.
+                </p><br>
+                <h2>
+                    So, who are the big players in the EV scene in Singapore?
+                </h2>
+                <br><br>
+                <hr>
+                <br>
+
+                <table class = "tesla" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/Teslalogo.png"  id="teslapic"></th>
+                    <th> 
+                        Tesla is a well-known American electric vehicle company that has a presence in Singapore,
+                        albeit relatively small compared to other countries. 
+                        Tesla began selling its electric vehicles in Singapore in 2017, and it currently offers several models, 
+                        including the Model S, Model X, and Model 3.
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "bluesg" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/BlueSGLogo.png" width='1200' height= "600" id="bluesgpic"></th>
+                    <th> 
+                        BlueSG is a Singapore-based electric car-sharing service that offers a fleet of electric vehicles for short-term rental. 
+                        It was launched in 2017, in partnership with the Land Transport Authority (LTA) and Economic Development Board (EDB), 
+                        as part of efforts to make Singapore’s transport system more sustainable. 
+                        Currently, the company has more than 1,000 electric cars in its fleet. <br><br>
+                        BlueSG cars are 100% electric, and can run up to 200 km on a single charge!
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "charge+" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/chargeplus.png" width="900" height = "350" id="chargepic"></th>
+                    <th> 
+                        Charge+ perates a network of electric vehicle (EV) charging stations across the country. 
+                        As one of the largest EV charging network operators in Singapore, 
+                        Charge+ also offers a mobile application that allows electric vehicle owners to locate charging stations, 
+                        reserve charging slots, and make payments through the app.                   
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "greenlots" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/greenlots.svg" width="1500" height = "500" id="greenlotspic"></th>
+                    <th> 
+                        Greenlots is an EV charging company based in Los Angeles, under Shell Group. 
+                        Established in 2008, it has since expanded its operations globally, including Singapore. 
+                        Greenlots provides subscription-based packages that allows you to pay a monthly fee over a fixed term 
+                        rather than the full upfront cost at the beginning. <br><br>
+
+                        They even offer a cloud-based platform that allows charging station owners and operators to remotely 
+                        manage their charging infrastructure!
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+        
+                <table class = "tribecar" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/tribecar-logo.png" width="1100" height = "400" id="tribecarpic"></th>
+                    <th> 
+                        Tribecar is a car-sharing service that operates a fleet of electric and hybrid vehicles in Singapore. 
+                        It currently has more than 1,300 vehicles across the country, and 
+                        users can rent the vehicles on an hourly or daily basis through the TribeCar app. 
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "grabwheels" style="width:100%">
+                    <tr>
+                    <th><img src = "resources/grabwheels.png" width="900" height = "500" id="grabwheelspic"></th>
+                    <th> 
+                        Electric cars are not the only vehicles that we see! <br><br>
+                        Grab, a ride-hailing company, launched GrabWheels in 2019, which is an electric scooter-sharing service.
+                        Users can rent electric scooters through the Grab app and use them to travel short distances.
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <p>
+                    Have you spotted any of these electric vehicles or charging points in your vicinity? 
+                    Well, these are just the tip of the iceberg in Singapore’s EV scene. 
+                    But other than for private use, where can EVs be seen in the public sector?
+                </p>
+                <br> 
+                <p> Here are some examples of how EVs will be or are being used on a large scale in Singapore!</p><br>
+
+                <table class = "nusbus" style="width:100%">
+                    <tr>
+                    <th><img src ="resources/nusbus.webp" height = "200vh"></th>
+                    <th> 
+                        ComfortDelGro has begun operating the new electric bus fleet in NUS, 
+                        replacing the old fleet of shuttle buses that ran on petrol. Hurray to quieter bus rides!
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "smrttaxi" style="width:100%">
+                    <tr>
+                    <th><img src ="resources/taxi.jpg" height = "200vh"></th>
+                    <th> 
+                        SMRT has plans to replace its entire taxi fleet with electric taxis. 
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+                <table class = "singpost" style="width:100%">
+                    <tr>
+                    <th><img src ="resources/singpost.webp" height = "200vh"></th>
+                    <th> 
+                        SingPost has begun its pilot testing on the use of three-wheel electric scooters and vans to deliver mail. 
+                        According to the Straits Times, it has plans to replace all of its lighter delivery vehicles with their electric counterparts by 2026. 
+                    </th>
+                </table>
+                <br>
+                <hr>
+                <br>
+
+            </article>
+
+            <article class ="lineElectric">
+                <p> 
+                    Lastly, let's take a look at the electric vehicle population in Singapore over the years. 
+                    Click on the legend to remove the specific dataset from the graph and view each vehicle type separately! 
+                </p>
+                <div id="canvas-container">
+                    <canvas id="linechartElectric" style="position: relative; height:50vh; width:50vw"></canvas>
+                </div>
+                <br>
+                <p> 
+                    From here, we can see that the number of electric vehicles used by Singaporeans has increased exponentially, 
+                    although they still constitute a small proportion of the total motor vehicles used in Singapore. 
+                    Yet, we can continue to expect that with an even greater increase in awareness of the benefits of electric vehicles, 
+                    as well as the proliferation of electric vehicle suppliers with the continued support from the government, 
+                    these numbers are bound to increase even more. 
+                </p>
+            </article>
+            
+            <!--conclusion-->
+            <article class="conclusion" >
+                <h1>Conclusion</h1>
+                <p> 
+                    We began by asking the question, "How has Singapore progressed in transitioning to renewable energy, 
+                    and how close is it to achieving its SGP2030 targets?"
+                </p><br>
+                <p>
+                    After addressing common misconceptions in the different types of energy, exploring Singapore's main energy sources and delving into
+                    Singapore's current consumption patterns over the years, Singapore still seems to be a far cry from achieving its SGP2030 goals
+                    at the current moment. 
+                </p><br>
+                <p>
+                    Yet, not all is lost, as we’ve seen some huge leaps in the renewable energy sector, 
+                    especially with regards to solar energy and electric vehicles. 
+                    For a land scarce city-state as Singapore, the targets may still seem ambitiously high for now, 
+                    but we can expect to see greater steps taken by the government and relevant sectors as they sign more 
+                    leases in the coming years to enable improvements in renewable energy infrastructure.
+                </p><br>
+                <p>
+                    Feel like you've learnt a thing or two from this data story? Go back up to the top and reattempt the quiz section again, 
+                    if you haven't done so already!
+                </p><br><br>
+
+            </article>
+
+            <article class ="references"> 
+                <h1>References</h1>
+                <p> This data story would not have come through if not for the many sources that have been made readily available for us. 
+                    Below are the sources used for this project!
+                </p><br>
+                <p>
+                <ul id="referencelist">
+                    <li>Electric vehicle journey in 2021. (2021, December 29). The Straits Times. https://www.straitstimes.com/singapore/transport/singapores-electric-vehicle-journey-in-2021 </li>
+                    <li>What is green energy? (n.d.). National Grid. https://www.nationalgrid.com/stories/energy-explained/what-is-green-energy</li>
+                    <li>Energy reset. (n.d.). Green Plan. https://www.greenplan.gov.sg/key-focus-areas/energy-reset/</li>
+                    <li>Renewable Energy Singapore. (n.d.). EnergyTracker Asia. https://energytracker.asia/renewable-energy-singapore/</li>
+                    <li>What sources does the country get its energy from? (n.d.). Our World in Data. https://ourworldindata.org/energy/country/singapore#what-sources-does-the-country-get-its-energy-from</li>
+                    <li>Singapore's approach to alternative energy. (n.d.). National Climate Change Secretariat. https://tinyurl.com/yjandedj</li><br><br>
+                    <li><strong>Graphics: </strong></li>
+                        <ul>
+                            <li>Flaticon. (n.d.). https://www.flaticon.com/</li>
+                        </ul><br><br>
+                    <li><strong>Data:</strong></li>
+                        <ul>
+                            <li>Singapore Energy Statistics 2021. (n.d.). Energy Market Authority. https://www.ema.gov.sg/singapore-energy-statistics/Ch06/index6</li>
+                            <li>SES Public 2022. (n.d.). Energy Market Authority. https://www.ema.gov.sg/assets/stat_table/SES_Public_2022.xlsx</li>
+                            <li>Singapore now has over 3,000 public EV charging points with more to be installed, says country’s LTA. (2022, September 5). Paul Tan's Automotive News. https://paultan.org/2022/09/05/singapore-now-has-over-3000-public-ev-charging-points-with-more-to-be-installed-says-countrys-lta/</li>
+                            <li>MVP by Fuel Type. (2022). Land Transport Authority. https://tinyurl.com/2p9dryy8</li>
+                        </ul><br>
+                    <li><strong>Coding guide:</strong></li>
+                        <ul>
+                            <li>W3Schools. (n.d.). https://www.w3schools.com/</li>
+                            <li>Simple Steps Code. (n.d.). JavaScript Quiz Tutorial. Retrieved from https://simplestepscode.com/javascript-quiz-tutorial/</li>
+                            <li>Grasshopper. (n.d.). Grasshopper: Learn to Code for Free. Retrieved from https://learn.grasshopper.app/</li>
+                        </ul>
+                </ul>
+                </p>
+            </article>
+
+        </div>
+    
+    </body>
+
+</html>
